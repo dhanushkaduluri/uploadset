@@ -1,0 +1,15 @@
+###
+
+POST  http://localhost:4004/media/MediaFile
+Content-Type: application/json
+
+{
+    "fileName": "example.txt",
+    "content": "Base64EncodedContentHere",
+    "mediaType": "text/plain",
+    "url": "demokit/sample/UploadCollection/LinkedDocuments/Business Plan Agenda.doc"
+}
+
+###
+http://localhost:4004/media/MediaFile
+

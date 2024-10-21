@@ -1,0 +1,129 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "sap.btp.uploadset",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.15.2",
+      "toolsId": "f45e7dff-ae7c-4f81-83f9-cd572d71df6b"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/media/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    
+    "dependencies": {
+      "minUI5Version": "1.129.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.btp.uploadset.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "sap.btp.uploadset.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RoutePage",
+          "pattern": ":?query:",
+          "target": [
+            "TargetPage"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Page",
+          "viewName": "Page"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "sap.btp.uploadset.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    },
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"Page.view.xml",
+					"Page.controller.js",
+					"items.json",
+					"manifest.json"
+				]
+			}
+		}
+  }
+}
