@@ -46,24 +46,7 @@
 				<upload:UploadSetItem
 						fileName="{mediafile>fileName}"
 						mediaType="{mediafile>mediaType}"
-						url="{mediafile>url}">
-						<!-- thumbnailUrl="{thumbnailUrl}"
-						markers="{path: 'markers', templateShareable: false}"
-						statuses="{path: 'statuses', templateShareable: false}"
-						uploadState="{uploadState}"> -->
-					<!-- <upload:markers>
-						<ObjectMarker
-								type="{type}"
-								visibility="{visibility}"/>
-					</upload:markers>
-					<upload:statuses>
-						<ObjectStatus
-								title="{title}"
-								text="{text}"
-								state="{state}"
-								icon="{icon}"
-								active="{active}"/>
-					</upload:statuses> -->
+						url="{mediafile>url}">						
 				</upload:UploadSetItem>
 			</upload:items>
 		</upload:UploadSet>

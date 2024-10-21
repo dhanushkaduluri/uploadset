@@ -15,7 +15,7 @@ module.exports = cds.service.impl(async function () {
      * for entity Mediafile.
      */
     this.before('CREATE', MediaFile, async (req) => {
-        
+        // just to check weather triggering or not
         console.log(MediaFile);
     })
 
