@@ -15,14 +15,16 @@
 				maxFileNameLength="30"
 				maxFileSize="200"
 				mediaTypes="text/plain,application/msword,image/png,application/json"
-				uploadUrl="/media/MediaFile"
 				items="{
                     path: 'mediafile>/'
                 }"
 				mode="MultiSelect"				
 				selectionChanged="onSelectionChange"
+				beforeItemAdded="onBeforeItemAdded"
 				afterItemAdded="onAfterItemAdded"
-				afterItemRemoved="onAfterItemRemoved">
+				afterItemRemoved="onAfterItemRemoved"
+				
+				>
 			<upload:toolbar>
 				<OverflowToolbar>
 					<ToolbarSpacer/>
