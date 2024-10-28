@@ -11,27 +11,23 @@
 				showIcons="true"
 				uploadEnabled="true"
 				terminationEnabled="true"
-				fileTypes="txt,doc,png,json"
+				fileTypes="txt,doc,png,json,jpg"
 				maxFileNameLength="30"
-				maxFileSize="200"
-				mediaTypes="text/plain,application/msword,image/png,application/json"
+				maxFileSize="20000"
+				mediaTypes = "text/plain,application/msword,image/png,image/jpg,application/json"
+
 				items="{
-                    path: 'mediafile>/'
+                    path: '/MediaFile'
                 }"
 				mode="MultiSelect"				
 				selectionChanged="onSelectionChange"
 				beforeItemAdded="onBeforeItemAdded"
 				afterItemAdded="onAfterItemAdded"
 				afterItemRemoved="onAfterItemRemoved"
-				
 				>
 			<upload:toolbar>
 				<OverflowToolbar>
 					<ToolbarSpacer/>
-					<Button
-							id="uploadSelectedButton"							
-							text="Upload selected"
-							press="onUploadSelectedButton"/>
 					<Button
 							id="downloadSelectedButton"
 							text="Download selected"
@@ -43,12 +39,12 @@
 							press="onVersionUpload"/>
 					<upload:UploadSetToolbarPlaceholder />
 				</OverflowToolbar>
-			</upload:toolbar>
-			<upload:items>
+			</upload:toolbar >
+			<upload:items >
 				<upload:UploadSetItem
-						fileName="{mediafile>fileName}"
-						mediaType="{mediafile>mediaType}"
-						url="{mediafile>url}">						
+						fileName="{fileName}"
+						mediaType="{mediaType}"
+						url="{url}">						
 				</upload:UploadSetItem>
 			</upload:items>
 		</upload:UploadSet>

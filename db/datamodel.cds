@@ -2,10 +2,9 @@ namespace Media.db;
 
 entity MediaFile {
     key id        : UUID;
-
+    @Core.ContentDisposition.Type: 'inline'
     @Core.MediaType: mediaType
     content       : LargeBinary;  // The binary content of the file
-    @assert: 'mediaType in ["image/png", "image/jpeg", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]' // Validate media type
     @Core.IsMediaType: true
     mediaType     : String;        // MIME type of the file
 

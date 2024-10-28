@@ -29,7 +29,7 @@ sap.ui.define([
 
     
                 // set data model
-                var oDataModel = new sap.ui.model.odata.v2.ODataModel("https://port4004-workspaces-ws-f7mzc.us10.trial.applicationstudio.cloud.sap/media");
+                var oDataModel = new sap.ui.model.odata.v2.ODataModel("https://port4004-workspaces-ws-f7mzc.us10.trial.applicationstudio.cloud.sap/odata/v2/media");
                 console.log(oDataModel);
                 this.setModel(oDataModel);
             }
